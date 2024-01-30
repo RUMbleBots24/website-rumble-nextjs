@@ -1,0 +1,73 @@
+## UPRM Rumblebots 2023
+## Edimar Valentin-Kery <edimar.valentin@upr.edu>
+## Juan Quintana <juan.quintana5@upr.edu>
+
+name: Build Core 
+
+## Don't trigger CI
+trigger: none
+
+## Trigger on Pull Request
+pr:
+  branches:
+    include:
+      - main
+
+## Build on Ubuntu, Windows and MacOS
+stages:
+- stage: build 
+  displayName: Build
+  jobs:
+  - job: BuildUbuntu
+    pool: 
+      vmImage: 'ubuntu-latest'
+    steps:
+    - checkout: self
+      submodules: true
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '16.x'
+      displayName: "Install Node.js"
+  
+    - script: npm install
+      displayName: Install Node Packages
+
+    - script: npm run build
+      displayName: Build NextJS App
+    displayName: Build on Ubuntu 
+  
+  - job: BuildWindows
+    pool: 
+      vmImage: 'windows-latest'
+    steps:
+    - checkout: self
+      submodules: true
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '16.x'
+      displayName: "Install Node.js"
+  
+    - script: npm install
+      displayName: Install Node Packages
+
+    - script: npm run build
+      displayName: Build NextJS App
+    displayName: Build on Windows
+
+  - job: BuildMacOS
+    pool: 
+      vmImage: 'macos-latest'
+    steps:
+    - checkout: self
+      submodules: true
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '16.x'
+      displayName: "Install Node.js"
+  
+    - script: npm install
+      displayName: Install Node Packages
+
+    - script: npm run build
+      displayName: Build NextJS App
+    displayName: Build on MacOS 
