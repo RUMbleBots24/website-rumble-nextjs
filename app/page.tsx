@@ -10,6 +10,7 @@ import CompetitionImage from '@/app/images/competitions/nhrl2023-2.jpg'
 import {PrismaClient} from "@prisma/client";
 import {Divider} from "@nextui-org/react";
 import { JSX } from 'react';
+import Hero from "@/components/Hero";
 
 
 const OurMission = {
@@ -59,6 +60,7 @@ export default async function Home() {
 
     return (
         <main className="container px-4 mx-auto">
+            <Hero/>
             <div className="flex gap-8 flex-wrap lg:flex-nowrap">
                 <div className="flex flex-col gap-8 lg:basis-1/3">
                     <MissionCard key={CombatRobotics.key} body={CombatRobotics.body} header={CombatRobotics.header}
