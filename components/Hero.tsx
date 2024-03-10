@@ -30,7 +30,7 @@ const Hero = () => {
     },[api])
 
     return (
-        <div className={" md:w-full flex flex-col gap-0 mb-4"}>
+        <div className={" md:w-full flex flex-col gap-0 mb-8"}>
             <Carousel setApi={setApi} className={"  text-white"} plugins={[Autoplay({delay:5000, stopOnMouseEnter : true })]}>
                 <CarouselContent >
                     <CarouselItem>
@@ -44,7 +44,7 @@ const Hero = () => {
                     </CarouselItem>
                 </CarouselContent>
             </Carousel>
-            <Card className={"rounded-t-none"}>
+            <Card className={"rounded-t-none bg-secondary-200"}>
                 <CardHeader>
                     {Array.from(Array(count).keys()).map((i) => (
                         <Button

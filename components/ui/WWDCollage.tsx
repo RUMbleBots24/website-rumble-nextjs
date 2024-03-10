@@ -101,7 +101,7 @@ export const WWDCollage = () => {
   } else {
     return (
       <Carousel
-        className=" bg-black "
+        className=""
         plugins={[Autoplay({ delay: 5000, stopOnHover: true })]}
       >
         <CarouselContent className="h-96 w-full">
