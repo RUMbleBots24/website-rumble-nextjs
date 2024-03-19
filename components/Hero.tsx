@@ -34,7 +34,7 @@ const Hero = () => {
             <Carousel setApi={setApi} className={"  text-white"} plugins={[Autoplay({delay:5000, stopOnMouseEnter : true })]}>
                 <CarouselContent >
                     <CarouselItem>
-                        <Image src={'./electronics-2019.jpg'} className={"md:h-[50vh] md:w-[100vw] object-top object-cover rounded-b-none"} alt={'hero1'}  />
+                        <Image src={'./electronics-2019.jpg'} className={"md:h-[70vh] md:w-[100vw] object-top object-cover rounded-b-none"} alt={'hero1'}  />
                     </CarouselItem>
                     <CarouselItem>
                         <Image src={'/mecanica-2019.jpg'} className={"md:h-[50vh] md:w-[100vw] object-top object-cover rounded-b-none"} alt={'hero2'}  />

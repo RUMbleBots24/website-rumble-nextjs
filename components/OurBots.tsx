@@ -42,7 +42,7 @@ export  const OurBots = ({bots} : Props) => {
             </div>
             <div className="basis-2/3 flex flex-wrap flex-row justify-evenly items-stretch gap-6">
                 {bots.map((Bot)=>(
-                    <div  key={Bot.id} className="w-auto basis-1/4">
+                    <div  key={Bot.id} className="w-auto basis-1/3">
                             <BotCard OnClick={() => handleClick(Bot.id)} name={Bot.name} desc={Bot.desc} weight={Bot.weight} category={Bot.category}
                                      logo={Bot.images[1] !== undefined? Bot.images[1].path: null}
                                      logoAlt={Bot.images[1] !== undefined? Bot.images[1].alt: null}

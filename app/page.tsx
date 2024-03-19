@@ -12,6 +12,7 @@ import {Divider} from "@nextui-org/react";
 import { JSX } from 'react';
 import Hero from "@/components/Hero";
 
+import SponsorSlider from "@/components/SponsorSlider";
 
 const OurMission = {
     header: "Our Mission",
@@ -78,6 +79,7 @@ export default async function Home() {
                                  image={OurMission.image} imageAlt={OurMission.alt} iconID={OurMission.key}/>
                 </div>
             </div>
+            <SponsorSlider/>
             <WhatWeDo/>
             <div className="flex flex-col text-start pb-4">
                 <h2 className="font-heading font-bold text-5xl">Our <span className="text-primary-500">RUM</span>blebots
